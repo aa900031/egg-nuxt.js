@@ -1,10 +1,13 @@
 'use strict';
+const path = require('path');
 
-/**
- * egg-nuxt default config
- * @member Config#nuxt
- * @property {String} SOME_KEY - some description
- */
-exports.nuxt = {
+module.exports = appInfo => {
+  const config = {};
 
+  config.nuxt = {
+    srcDir: path.join(appInfo.baseDir, './resources'),
+    rootDir: path.join(appInfo.baseDir),
+  };
+
+  return config;
 };
