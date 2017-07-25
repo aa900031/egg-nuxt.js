@@ -1,14 +1,10 @@
 'use strict';
-const assert = require('assert');
-
 const MIDDLEWARE_RENDER_NUXT = 'renderNuxt';
 
 module.exports = app => {
-  assert.equal(
-    app.config.coreMiddleware.indexOf(MIDDLEWARE_RENDER_NUXT),
-    -1,
-    `Duplication of middleware name found: ${MIDDLEWARE_RENDER_NUXT}. Rename your middleware other than "${MIDDLEWARE_RENDER_NUXT}" please.`
-  );
+  if (app.config.coreMiddleware.indexOf(MIDDLEWARE_RENDER_NUXT) !== -1) {
+    app.logger.error(`[egg-nuxt] Duplication of middleware name found: ${MIDDLEWARE_RENDER_NUXT}. Rename your middleware other than "${MIDDLEWARE_RENDER_NUXT}" please.`)
+  }
   app.config.coreMiddleware.unshift(MIDDLEWARE_RENDER_NUXT);
 
   app.beforeStart(function* () {
