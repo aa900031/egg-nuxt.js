@@ -1,5 +1,5 @@
 {
-  "name": "egg-nuxt",
+  "name": "egg-nuxt.js",
   "version": "1.0.0",
   "description": "",
   "eggPlugin": {
@@ -45,14 +45,6 @@
   "ci": {
     "version": "6, 8"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/eggjs/egg-nuxt.git"
-  },
-  "bugs": {
-    "url": "https://github.com/eggjs/egg/issues"
-  },
-  "homepage": "https://github.com/eggjs/egg-nuxt#readme",
   "author": "zhong666",
   "license": "MIT"
 }
