@@ -6,10 +6,11 @@ module.exports = {
   get nuxt() {
     if (this.config.nuxt) {
       if (!this[NUXT]) {
+        this.logger.info('[egg-nuxt] Instance nuxt');
         this[NUXT] = new Nuxt(this.config.nuxt);
       }
     } else {
-      this.logger.error('[egg-nuxt] config.nuxt undefined')
+      this.logger.error('[egg-nuxt] config.nuxt undefined');
     }
     return this[NUXT];
   },
