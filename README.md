@@ -20,6 +20,8 @@
 [download-image]: https://img.shields.io/npm/dm/egg-nuxt.js.svg?style=flat-square
 [download-url]: https://npmjs.org/package/egg-nuxt.js
 
+> [Egg.js](https://eggjs.org) + [Nuxt.js](https://nuxtjs.org) = :zap:
+
 <!--
 Description here.
 -->
@@ -41,6 +43,9 @@ exports.nuxt = {
   package: 'egg-nuxt.js',
 };
 ```
+## Nuxt.js Changes
+- The Nuxt config file is now in  `config.[dev].js`, `dev` allow set `default`, `unittest`, `local`, `prod`
+- The Nuxt project directory is `resources` (default)
 
 ## Configuration
 
@@ -49,17 +54,15 @@ exports.nuxt = {
 exports.nuxt = {
 };
 ```
+see [nuxt.js config](https://nuxtjs.org/guide/configuration/) to learn more.
 
-see [config/config.default.js](config/config.default.js) for more detail.
+## Documentation
+- [Egg.js](https://eggjs.org/)
+- [Nuxt.js](https://nuxtjs.org/guide/)
+- [Vue.js](http://vuejs.org/guide/)
 
-## Example
-
-<!-- example here -->
-
-## Questions & Suggestions
-
-Please open an issue [here](https://github.com/eggjs/egg/issues).
-
-## License
-
-[MIT](LICENSE)
+## Licenses
+- [Egg.js license](https://github.com/eggjs/egg/blob/master/LICENSE)
+- [Nuxt.js license](https://github.com/nuxt/nuxt.js/blob/master/LICENSE.md)
+- [Vue.js license](https://github.com/vuejs/vue/blob/master/LICENSE)
+- This Projct [MIT](LICENSE)
